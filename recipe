@@ -1,0 +1,41 @@
+Create “microservice-00” SG, open 22, 80, 443 to MyIp
+Copy pem file into Cygwin home dir
+Launch EC2 instance in us-east-1
+ssh into EC2 instance
+run “sudo apt-get update && supo apt-get-upgrade”
+run “sudo apt-get install nodejs”, installs 29 packages
+run “sudo apt-get install nodejs-dev”, installs 16 new packages
+run “sudo apt-get install npm”, installs 86 packages
+run “sudo ln -s /usr/bin/nodejs /usr/bin/node*
+* Because of a conflict with another package, the executable from the Ubuntu repositories is called “nodejs” instead of “node”
+run “sudo npm init”
+$ sudo apt-get install python-software-properties
+$ curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash –
+$ sudo apt-get install nodejs
+$ node -v
+$ npm -v
+$ sudo npm install -g @angular/cli
+$ ng -v
+rm packages.json
+ng new mean-app (remove packages.json first)
+cd mean-app
+ng serve (should start listening on localhost:4200)
+sudo npm install --save-dev @angular/cli@latest
+sudo npm install @angular/compiler
+sudo npm install @angular/core
+sudo npm install @angular/compiler-cli
+Grab the private IP
+Edit /home/ubuntu/mean-app/.angular-cli.json
+Edit   "defaults": {
+Add     "serve": {
+               "port": 4200,
+               "host": "172.31.52.122"
+             },
+ng serve
+sudo npm install --save express body-parser
+create ../mean-app/server/server.js
+create ../mean-app/server/routes/api.js
+ng build (creates ../mean-app/dist
+mv dist/ server/
+cd server
+node server.js
